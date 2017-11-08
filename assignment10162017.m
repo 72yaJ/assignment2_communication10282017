@@ -37,7 +37,7 @@ s_s1 = zeros(1,length(s_s));
 s_b1 = zeros(1,length(s_b));
 for m = 1:1:6
     EbN0_db = 2*(m-1);
-    Eb = 2.5; % Eb is the average energy per bit, Es=5Ep=5=log2(M)*Eb
+    Eb = 2.5; % Eb is the average energy per bit, Es=Ep*(M^2-1)/3=5Ep=5=log2(M)*Eb
     N0_sd = Eb/10.^(EbN0_db/10); % SNR is Eb/N0, N0_sd is noise power spectral density
     N0 = sqrt(N0_sd/2)*randn(1,length(s_s)); % N0_sd/2 is two-sided power spectral density of the noise
     s_sn = s_s+N0; % symbol signal with noise
