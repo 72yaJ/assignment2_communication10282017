@@ -1,4 +1,4 @@
-% to generate the four symbols by QAM, and compare with the BER
+% to generate the four symbols by PAM, and compare with the BER
 close all;
 clear all;
 clc;
